@@ -290,6 +290,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .locked-copy { font-size: 7px; line-height: 1.25; color: #776c67; }
 .locked-copy b { color: #3f3937; font-size: 8px; font-weight: 500; }
 
+
+.mini-lock.is-open{
+
+  position: absolute;
+  top: -25px;
+}
+
 .mini-lock {
   position: relative;
   width: 14px;
