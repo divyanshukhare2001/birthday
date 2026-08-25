@@ -1,0 +1,94 @@
+:root {
+  --origin-bg:#0d0a10;
+  --origin-ink:#f4deda;
+  --origin-rose:#ed9292;
+  --origin-muted:#cbb5b3;
+}
+
+* { box-sizing:border-box; }
+html { min-height:100%; background:var(--origin-bg); }
+body { margin:0; }
+
+.origin-page {
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--origin-ink);
+  background:
+    radial-gradient(circle at 20% 15%,rgba(133,48,71,.24),transparent 28%),
+    radial-gradient(circle at 83% 72%,rgba(137,60,65,.18),transparent 31%),
+    radial-gradient(circle at 50% 45%,rgba(255,183,174,.035),transparent 42%),
+    repeating-linear-gradient(102deg,rgba(255,255,255,.012) 0,rgba(255,255,255,.012) 1px,transparent 1px,transparent 7px),
+    var(--origin-bg);
+  font-family:"Montserrat",sans-serif;
+}
+
+.origin-page::before {
+  content:"";
+  position:fixed;
+  z-index:0;
+  inset:0;
+  pointer-events:none;
+  box-shadow:inset 0 0 180px rgba(0,0,0,.88);
+}
+
+.origin-hearts { position:fixed; z-index:1; inset:0; overflow:hidden; pointer-events:none; }
+.origin-hearts span {
+  position:absolute;
+  left:var(--x);
+  bottom:-60px;
+  color:rgba(237,125,133,.34);
+  font:400 var(--size)/1 Georgia,serif;
+  text-shadow:0 0 12px rgba(238,116,127,.32);
+  animation:origin-heart-rise var(--duration) linear var(--delay) infinite;
+}
+
+.origin-shell { position:relative; z-index:2; width:min(1320px,100%); min-height:100vh; margin:0 auto; padding:30px 48px 66px; }
+.origin-back { display:inline-block; color:#d7c0bd; text-decoration:none; font:500 14px "Montserrat",sans-serif; transition:color .2s ease; }
+.origin-back:hover { color:#f09a99; }
+.origin-back:focus-visible { outline:3px solid rgba(239,143,141,.65); outline-offset:6px; }
+
+.origin-heading { max-width:900px; margin:38px auto 42px; text-align:center; }
+.origin-heading p { margin:0 0 10px; color:#d78786; font:500 11px "Montserrat",sans-serif; letter-spacing:.28em; text-transform:uppercase; }
+.origin-heading h1 { margin:0; color:#f0a09d; font:400 clamp(68px,9vw,118px)/.9 "Allura",cursive; text-shadow:0 0 24px rgba(231,105,111,.18); }
+.origin-heading > span { display:block; margin-top:20px; color:var(--origin-muted); font:500 clamp(20px,2.5vw,28px)/1.2 "Caveat",cursive; }
+
+.origin-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:clamp(24px,3.4vw,50px); }
+.origin-photo { position:relative; margin:0; padding:18px 18px 52px; background:#eadfd8; box-shadow:0 25px 55px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08); }
+.origin-photo-one { transform:rotate(-1.4deg); }
+.origin-photo-two { transform:rotate(1.3deg) translateY(22px); }
+.origin-photo::before,.origin-photo::after { content:""; position:absolute; z-index:2; top:-10px; width:86px; height:27px; opacity:.72; background:#c9a881; }
+.origin-photo::before { left:-25px; transform:rotate(-38deg); }
+.origin-photo::after { right:-25px; transform:rotate(36deg); }
+.origin-photo img { display:block; width:100%; height:clamp(450px,42vw,620px); object-fit:cover; object-position:center; filter:saturate(.83) contrast(.98) sepia(.08); }
+.origin-photo figcaption { position:absolute; left:20px; right:20px; bottom:14px; color:#684b45; text-align:center; font:600 clamp(18px,2vw,25px)/1.05 "Caveat",cursive; }
+.origin-photo figcaption span { color:#b95e63; font-family:Georgia,serif; }
+
+.origin-closing { margin:74px 0 0; color:#dda09c; text-align:center; font:500 clamp(25px,3.3vw,38px)/1.15 "Caveat",cursive; }
+.origin-closing span { color:#ef8e91; font-family:Georgia,serif; }
+
+@keyframes origin-heart-rise {
+  0% { opacity:0; transform:translate3d(0,0,0) rotate(-8deg) scale(.75); }
+  12% { opacity:.75; }
+  50% { transform:translate3d(24px,-52vh,0) rotate(10deg) scale(1); }
+  88% { opacity:.55; }
+  100% { opacity:0; transform:translate3d(-18px,-112vh,0) rotate(-12deg) scale(1.18); }
+}
+
+@media (max-width:700px) {
+  .origin-shell { padding:22px 18px 54px; }
+  .origin-heading { margin:44px auto 34px; }
+  .origin-heading p { font-size:9px; letter-spacing:.2em; }
+  .origin-heading h1 { font-size:67px; }
+  .origin-heading > span { margin-top:16px; font-size:21px; }
+  .origin-gallery { grid-template-columns:1fr; gap:40px; }
+  .origin-photo { padding:12px 12px 70px; }
+  .origin-photo-one,.origin-photo-two { transform:none; }
+  .origin-photo img { height:auto; aspect-ratio:3/4; }
+  .origin-photo figcaption { bottom:12px; font-size:20px; }
+  .origin-photo::before,.origin-photo::after { width:67px; height:22px; }
+  .origin-closing { margin-top:48px; font-size:27px; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .origin-hearts span { animation:none; opacity:.22; transform:translateY(calc(-1 * var(--x))); }
+}
