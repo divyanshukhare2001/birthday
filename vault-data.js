@@ -7,10 +7,10 @@
 
   const items = [
     { id: "it-begins", time: "12:00 AM", hour: 0, minute: 0, title: "It Begins", emoji: "♥", href: "surprises/it-begins.html" },
-    { id: "good-morning", time: "23:10 AM", hour: 23, minute: 10, title: "Good Morning,|Birthday Girl", emoji: "☀️", href: "surprises/good-morning.html" },
-    { id: "remember-this", time: "23:13 PM", hour: 23, minute: 13, title: "I Remember|This", emoji: "📷", href: "surprises/i-remember-this.html" },
-    { id: "playlist", time: "23:16 PM", hour: 23, minute: 16, title: "If Us Were a|Playlist", emoji: "🎧", href: "surprises/playlist.html" },
-    { id: "one-last-thing", time: "23:19 PM", hour: 23, minute: 19, title: "One Last|Thing", emoji: "🌙", href: "surprises/one-last-thing.html" }
+    { id: "good-morning", time: "23:30 AM", hour: 23, minute: 30, title: "Good Morning,|Birthday Girl", emoji: "☀️", href: "surprises/good-morning.html" },
+    { id: "remember-this", time: "23:32 PM", hour: 23, minute: 32, title: "I Remember|This", emoji: "📷", href: "surprises/i-remember-this.html" },
+    { id: "playlist", time: "23:35 PM", hour: 23, minute: 35, title: "If Us Were a|Playlist", emoji: "🎧", href: "surprises/playlist.html" },
+    { id: "one-last-thing", time: "23:37 PM", hour: 23, minute: 37, title: "One Last|Thing", emoji: "🌙", href: "surprises/one-last-thing.html" }
   ];
 
   function unlockAt(item) {
