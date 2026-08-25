@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f9eee9" />
+    <meta name="description" content="A good-morning birthday keepsake made especially for Shonaaa." />
+    <title>Good Morning, Birthday Girl · The Birthday Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="preload" href="../assets/birthday-sunset-hero.png" as="image" />
+    <link rel="preload" href="../assets/morning-carnations-photo.png" as="image" />
+    <link rel="preload" href="../assets/remember-sunset-memory.png" as="image" />
+    <link rel="preload" href="../assets/pink-carnation-bouquet.png" as="image" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../good-morning.css" />
+    <script defer src="../vault-data.js"></script>
+    <script defer src="../surprise.js"></script>
+    <script defer src="../good-morning.js"></script>
+  </head>
+  <body class="good-morning-page is-preloading" data-surprise-id="good-morning">
+    <div class="gm-preloader" id="gm-preloader" role="status" aria-label="Opening something made just for you">
+      <div class="gm-stars" aria-hidden="true"></div>
+      <p class="gm-preload-copy">Opening something<br />made just for you...</p>
+      <span class="gm-preload-copy-heart" aria-hidden="true">♡</span>
+      <div class="gm-envelope-scene" aria-hidden="true">
+        <div class="gm-golden-glow"></div>
+        <div class="gm-sparks">
+          <i style="--x:-104px;--y:-75px;--d:.05s;--s:7px"></i><i style="--x:-64px;--y:-118px;--d:.16s;--s:5px"></i>
+          <i style="--x:-22px;--y:-92px;--d:.27s;--s:8px"></i><i style="--x:24px;--y:-126px;--d:.1s;--s:5px"></i>
+          <i style="--x:67px;--y:-86px;--d:.22s;--s:7px"></i><i style="--x:104px;--y:-112px;--d:.34s;--s:4px"></i>
+          <i style="--x:-126px;--y:-22px;--d:.31s;--s:5px"></i><i style="--x:126px;--y:-31px;--d:.13s;--s:6px"></i>
+        </div>
+        <div class="gm-envelope">
+          <div class="gm-envelope-back"></div>
+          <div class="gm-letter"><span>for you ♡</span></div>
+          <div class="gm-envelope-front"></div>
+          <div class="gm-envelope-flap"></div>
+          <div class="gm-heart-seal">♥</div>
+        </div>
+      </div>
+      <span class="gm-floating-heart heart-one" aria-hidden="true">♥</span><span class="gm-floating-heart heart-two" aria-hidden="true">♥</span>
+      <span class="gm-floating-heart heart-three" aria-hidden="true">♥</span><span class="gm-floating-heart heart-four" aria-hidden="true">♥</span>
+      <div class="gm-stitch-path" aria-hidden="true"><span>♥</span></div>
+    </div>
+
+    <main class="gm-page" id="good-morning-content">
+      <div class="gm-page-inner">
+        <a class="gm-back" href="../index.html">← Back to your birthday</a>
+        <button class="gm-music" type="button" aria-label="A little birthday melody" title="A little birthday melody">♫</button>
+        <header class="gm-heading">
+          <h1>Good Morning,<br />Birthday Girl <span>☀️</span></h1>
+          <p>I hope this puts a smile on your face<br />as much as your smile puts on mine.</p>
+        </header>
+        <section class="gm-keepsake" aria-label="Ten things about you">
+          <span class="gm-paperclip" aria-hidden="true">⌁</span>
+          <p>10 things about you<br />that make me smile <b>♡</b></p>
+          <span class="gm-tape tape-left" aria-hidden="true"></span><span class="gm-tape tape-right" aria-hidden="true"></span>
+        </section>
+        <section class="gm-collage" aria-label="Birthday keepsake collage">
+          <div class="gm-under-polaroid" aria-hidden="true">
+            <figure><img src="../assets/morning-carnations-photo.png" alt="" /></figure>
+            <span class="gm-under-progress">1 / 10</span>
+          </div>
+          <button class="gm-flip-card is-cover" type="button" aria-label="Flip the cover photograph to read message 1 of 10">
+            <span class="gm-flip-inner">
+              <span class="gm-flip-face gm-flip-front">
+                <span class="gm-photo-mat"><img src="../assets/birthday-sunset-hero.png" alt="A girl holding warm fairy lights at sunset" /></span>
+                <span class="gm-card-progress" aria-hidden="true"></span>
+              </span>
+              <span class="gm-flip-face gm-flip-back">
+                <span class="gm-back-number">01</span>
+                <span class="gm-back-message">Your smile makes even the quietest morning feel like sunshine. <b>♡</b></span>
+                <span class="gm-back-doodle" aria-hidden="true">☀</span>
+              </span>
+            </span>
+          </button>
+          <button class="gm-current-message" type="button" aria-hidden="true" aria-label="Flip the latest message back to the photo stack">
+            <span class="gm-current-number">01</span>
+            <span class="gm-current-copy">Your smile makes even the quietest morning feel like sunshine. <b>♡</b></span>
+            <span class="gm-current-doodle" aria-hidden="true">☀</span>
+          </button>
+          <article class="gm-instruction" id="memory-note" tabindex="-1">
+            <p>Click each card<br />to read<br />something<br />about you <span>♡</span></p>
+          </article>
+          <img class="gm-flowers" src="../assets/pink-carnation-bouquet.png" alt="" />
+          <span class="gm-flower-sparkle sparkle-one" aria-hidden="true">✦</span><span class="gm-flower-sparkle sparkle-two" aria-hidden="true">✧</span>
+          <span class="gm-photo-sparkle" aria-hidden="true">✦</span><span class="gm-heart-sticker" aria-hidden="true">♥</span>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
