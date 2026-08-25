@@ -1,6 +1,7 @@
 :root { --rm-paper:#f8ede5; --rm-ink:#4b3c36; --rm-rose:#df7d7c; --rm-tape:#e9c38e; }
 
-.remember-page { min-height:100vh; overflow-x:hidden; color:var(--rm-ink); background:var(--rm-paper); }
+html { max-width:100%; overflow-x:hidden; overflow-x:clip; }
+.remember-page { width:100%; max-width:100%; min-height:100vh; overflow-x:hidden; overflow-x:clip; color:var(--rm-ink); background:var(--rm-paper); }
 .remember-page.is-preloading { overflow:hidden; }
 
 /* Developing Polaroid curtain */
@@ -21,7 +22,7 @@
 .rm-drawn-heart { position:absolute; right:7%; bottom:4.2%; color:#e88c8a; font:400 25px/1 Georgia,serif; transform:rotate(-8deg); }
 
 /* Revealed scrapbook page */
-.rm-page { min-height:100vh; background:radial-gradient(circle at 82% 12%,rgba(244,170,170,.18),transparent 19%),radial-gradient(circle at 16% 74%,rgba(255,255,255,.72),transparent 26%),repeating-linear-gradient(91deg,rgba(95,62,44,.016) 0,rgba(95,62,44,.016) 1px,transparent 1px,transparent 5px),#f8ede5; }
+.rm-page { width:100%; max-width:100%; min-height:100vh; overflow-x:hidden; overflow-x:clip; background:radial-gradient(circle at 82% 12%,rgba(244,170,170,.18),transparent 19%),radial-gradient(circle at 16% 74%,rgba(255,255,255,.72),transparent 26%),repeating-linear-gradient(91deg,rgba(95,62,44,.016) 0,rgba(95,62,44,.016) 1px,transparent 1px,transparent 5px),#f8ede5; }
 .rm-page-inner { position:relative; width:min(100%,980px); min-height:max(720px,100vh); margin:0 auto; padding:28px 50px 44px; overflow:hidden; }
 .rm-back { position:absolute; z-index:5; top:23px; left:28px; color:#8c7167; text-decoration:none; font:600 18px "Caveat",cursive; }
 .rm-back:hover { color:#c66c6d; }
@@ -56,8 +57,8 @@
 
 @media (max-width:650px) {
   .rm-preload-copy { top:13%; font-size:27px; }.rm-preload-heart { top:25%; left:72%; }.rm-developing-polaroid { top:59%; width:min(72vw,310px); padding:5% 5% 17%; }
-  .rm-page-inner { min-height:100vh; padding:68px 20px 48px; overflow:visible; }.rm-back { top:19px; left:17px; font-size:17px; }.rm-corner-heart { top:17px; right:18px; font-size:31px; }.rm-heading { padding-top:5px; }.rm-heading h1 { font-size:44px; }.rm-heading i { margin-top:4px; }
-  .rm-memory { grid-template-columns:1fr; gap:34px; width:100%; margin-top:27px; }.rm-polaroid { width:min(88vw,410px); justify-self:center; padding:5% 5% 14%; }.rm-story { width:min(83vw,380px); justify-self:center; padding:25px 28px; border:1px solid rgba(190,151,130,.22); background:rgba(255,248,240,.55); box-shadow:0 5px 12px rgba(99,70,54,.08); }.rm-story p { font-size:22px; line-height:1.08; }.rm-closing-note { width:min(89vw,420px); margin-top:35px; padding:17px 42px 18px; }.rm-closing-note p { font-size:20px; }.rm-note-heart { right:13px; top:16px; }
+  .rm-page-inner { min-height:100vh; padding:68px 20px 48px; overflow:visible; overflow-x:hidden; overflow-x:clip; }.rm-back { top:19px; left:17px; font-size:17px; }.rm-corner-heart { top:17px; right:18px; font-size:31px; }.rm-heading { padding-top:5px; }.rm-heading h1 { font-size:44px; }.rm-heading i { margin-top:4px; }
+  .rm-memory { grid-template-columns:1fr; gap:34px; width:100%; margin-top:27px; }.rm-polaroid { width:min(82vw,410px); justify-self:center; padding:5% 5% 14%; }.rm-story { width:min(83vw,380px); justify-self:center; padding:25px 28px; border:1px solid rgba(190,151,130,.22); background:rgba(255,248,240,.55); box-shadow:0 5px 12px rgba(99,70,54,.08); }.rm-story p { font-size:22px; line-height:1.08; }.rm-closing-note { width:min(89vw,420px); margin-top:35px; padding:17px 42px 18px; }.rm-closing-note p { font-size:20px; }.rm-note-heart { right:13px; top:16px; }
 }
 
 @media (prefers-reduced-motion:reduce) {
