@@ -1,16 +1,16 @@
 (function () {
   "use strict";
 
-  const TARGET_DATE = { year: 2026, monthIndex: 7, day: 25 };
+  const TARGET_DATE = { year: 2026, monthIndex: 7, day: 26 };
   const DATE_KEY = `${TARGET_DATE.year}-${String(TARGET_DATE.monthIndex + 1).padStart(2, "0")}-${String(TARGET_DATE.day).padStart(2, "0")}`;
   const STORAGE_KEY = `birthday-vault:opened:${DATE_KEY}`;
 
   const items = [
     { id: "it-begins", time: "12:00 AM", hour: 0, minute: 0, title: "It Begins", emoji: "♥", href: "surprises/it-begins.html" },
-    { id: "good-morning", time: "23:30 AM", hour: 23, minute: 30, title: "Good Morning,|Birthday Girl", emoji: "☀️", href: "surprises/good-morning.html" },
-    { id: "remember-this", time: "23:32 PM", hour: 23, minute: 32, title: "I Remember|This", emoji: "📷", href: "surprises/i-remember-this.html" },
-    { id: "playlist", time: "23:35 PM", hour: 23, minute: 35, title: "If Us Were a|Playlist", emoji: "🎧", href: "surprises/playlist.html" },
-    { id: "one-last-thing", time: "23:37 PM", hour: 23, minute: 37, title: "One Last|Thing", emoji: "🌙", href: "surprises/one-last-thing.html" }
+    { id: "good-morning", time: "9:30 AM", hour: 9, minute: 30, title: "Good Morning,|Birthday Girl", emoji: "☀️", href: "surprises/good-morning.html" },
+    { id: "remember-this", time: "13:00 PM", hour: 13, minute: 0, title: "I Remember|This", emoji: "📷", href: "surprises/i-remember-this.html" },
+    { id: "playlist", time: "17:00 PM", hour: 17, minute: 0, title: "If Us Were a|Playlist", emoji: "🎧", href: "surprises/playlist.html" },
+    { id: "one-last-thing", time: "20:00 PM", hour: 20, minute: 0, title: "One Last|Thing", emoji: "🌙", href: "surprises/one-last-thing.html" }
   ];
 
   function unlockAt(item) {
